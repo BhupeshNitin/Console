@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Active.Scaler">
+<parameter name="cofig_file" value="src/test/java/ActiveScaler/utiles/org.properties"/>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="ActiveScaler.AS_1.Demo"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
