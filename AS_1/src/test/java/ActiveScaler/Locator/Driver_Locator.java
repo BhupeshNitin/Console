@@ -10,11 +10,11 @@ public interface Driver_Locator
 		String loc_DriverSearchbutton = "//*[@id='hoverable-rows']/div/div/div/div/div[1]/div/div/div[2]/button";
 		
 		// Add Driver
-		String loc_AddDriver = "//div";
+		String loc_AddDriver = "//*[@id='hoverable-rows']/div/div/div/div/div[3]/div[1]/button[2]/following::div[1]";
 		
 		// Driver Basic Info
 		
-    	String loc_DriverName = "//*[@name='name']";
+    	String loc_DriverName = "//input[@placeholder='Enter name']";
 		String loc_DriverEmail = "//*[@name='email]";
 		String loc_DriverContactNumber = ".//*[@name='phone']";
 		String loc_DriverAge = ".//*[@name='age']";

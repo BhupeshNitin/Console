@@ -24,18 +24,22 @@ public class Driver implements Driver_Locator
 	{
 		
 		driver.findElement(By.xpath(loc_DriverHomePage)).click();
-		Thread.sleep(300);
-		WebDriverWait wait = new WebDriverWait(driver, 20);
-		WebElement add=wait.until(ExpectedConditions.elementToBeClickable(By.xpath(loc_AddDriver)));
-		add.click();
+		Thread.sleep(2000);
+	//	WebDriverWait wait = new WebDriverWait(driver, 20);
+	//	WebElement add=wait.until(ExpectedConditions.elementToBeClickable(By.xpath(loc_AddDriver)));
+		//add.click();
 	//	driver.findElement(By.xpath(loc_AddDriver));
-		Thread.sleep(300);
 	}
 	public void add_drivercreation() throws Throwable
 	{
-		Thread.sleep(300);
-		driver.findElement(By.xpath(loc_AddDriver)).click();
-		Thread.sleep(300);
+		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebElement add =wait.until(ExpectedConditions.elementToBeClickable(By.xpath(loc_AddDriver)));
+		add.click();
+		Thread.sleep(2000);
+		String driver_window = driver.getWindowHandle();
+		System.out.println(driver_window);
+		driver.switchTo().window(driver_window);
+		driver.findElement(By.name(loc_DriverName)).sendKeys("Auto_Driver");
 	}
 
 }

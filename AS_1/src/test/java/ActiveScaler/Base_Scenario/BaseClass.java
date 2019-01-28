@@ -64,12 +64,14 @@ public class BaseClass
 		 tagsi_driver = new Driver(driver, ps);
 	}
 	
-	@AfterClass
+
+		
+	/*@AfterClass
 	public void close()
 	{
 		driver.quit();
 	}
-
+*/
 	
 	
 }
